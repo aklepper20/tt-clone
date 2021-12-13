@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -6,10 +6,16 @@ import MessageIcon from "@mui/icons-material/Message";
 import ShareIcon from "@mui/icons-material/Share";
 
 function SideBar() {
+  const [liked, setLiked] = useState(false);
+
   return (
     <Container>
       <SideBarButtons>
-        <FavoriteBorderIcon />
+        {liked ? (
+          <FavoriteIcon onClick={(e) => setLiked(false)} />
+        ) : (
+          <FavoriteBorderIcon onClick={(e) => setLiked(true)} />
+        )}
         <p>300</p>
       </SideBarButtons>
       <SideBarButtons>

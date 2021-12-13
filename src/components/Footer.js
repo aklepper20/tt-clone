@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import Ticker from "react-ticker";
 
