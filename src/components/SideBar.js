@@ -9,20 +9,22 @@ function SideBar({ likes, shares, messages }) {
   const [liked, setLiked] = useState(false);
   const [addLikes, setAddLikes] = useState(likes);
 
-  const makeLikes = () => {
+  const addLike = (e) => {
     setLiked(false);
+    setAddLikes(addLikes - 1);
+  };
+
+  const removeLike = (e) => {
+    setLiked(true);
     setAddLikes(addLikes + 1);
   };
   return (
     <Container>
       <SideBarButtons>
         {liked ? (
-          <FavoriteIcon onClick={((e) => setLiked(false), makeLikes)} />
+          <FavoriteIcon onClick={(e) => addLike(e)} />
         ) : (
-          <FavoriteBorderIcon
-            onClick={(e) => setLiked(true)}
-            // onClick={console.log("hi")}
-          />
+          <FavoriteBorderIcon onClick={(e) => removeLike(e)} />
         )}
         <p>{addLikes}</p>
       </SideBarButtons>
