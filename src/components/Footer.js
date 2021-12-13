@@ -56,6 +56,11 @@ const FooterImage = styled.div`
   img {
     height: 50px;
     width: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 10px;
     filter: invert(1);
   }
 `;
@@ -63,10 +68,14 @@ const FooterImage = styled.div`
 const FooterTicker = styled.div``;
 const FooterIcon = styled.div`
   position: absolute;
-  padding: 12px;
 `;
 const TickerContainer = styled.div`
   height: fit-content;
-  margin-left: 40px;
+  width: 100%;
+  margin-left: 50px;
+
+  p {
+    margin: 0;
+  }
 `;
 export default Footer;
