@@ -25,7 +25,7 @@ function Video({ url, channel, desc, song, likes, messages, shares }) {
         <video
           ref={videoRef}
           onClick={onVideoPress}
-          src="https://www.tiktok.com/@my_vanh/video/7033354984381107482?is_copy_url=0&is_from_webapp=v1&sender_device=pc&sender_web_id=7041265399476864517"
+          src={url}
           width="100%"
           height="100%"
           loop
