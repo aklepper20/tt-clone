@@ -7,16 +7,24 @@ import ShareIcon from "@mui/icons-material/Share";
 
 function SideBar({ likes, shares, messages }) {
   const [liked, setLiked] = useState(false);
+  const [addLikes, setAddLikes] = useState(likes);
 
+  const makeLikes = () => {
+    setLiked(false);
+    setAddLikes(addLikes + 1);
+  };
   return (
     <Container>
       <SideBarButtons>
         {liked ? (
-          <FavoriteIcon onClick={(e) => setLiked(false)} />
+          <FavoriteIcon onClick={((e) => setLiked(false), makeLikes)} />
         ) : (
-          <FavoriteBorderIcon onClick={(e) => setLiked(true)} />
+          <FavoriteBorderIcon
+            onClick={(e) => setLiked(true)}
+            // onClick={console.log("hi")}
+          />
         )}
-        <p>{liked ? likes + 1 : likes}</p>
+        <p>{addLikes}</p>
       </SideBarButtons>
       <SideBarButtons>
         <MessageIcon />

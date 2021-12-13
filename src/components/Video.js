@@ -41,7 +41,6 @@ const VideoContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: white;
   scroll-snap-align: start;
 `;
 
@@ -49,7 +48,7 @@ const VideoPlayer = styled.div`
   width: 100%;
   height: 100%;
   object-fit: fill;
-  background-color: red;
+  background-color: black;
 `;
 
 export default Video;
