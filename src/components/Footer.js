@@ -10,14 +10,21 @@ function Footer() {
       <FooterText>
         <h3>@qazi</h3>
         <p>This is a dexcription</p>
-        <MusicNoteIcon />
-        <Ticker mode="smooth">
-          {({ index }) => (
-            <>
-              <h1>hiiiiiii</h1>
-            </>
-          )}
-        </Ticker>
+        <FooterTicker>
+          <FooterIcon>
+            <MusicNoteIcon />
+          </FooterIcon>
+
+          <TickerContainer>
+            <Ticker mode="smooth">
+              {({ index }) => (
+                <>
+                  <p>hiiiiiii</p>
+                </>
+              )}
+            </Ticker>
+          </TickerContainer>
+        </FooterTicker>
       </FooterText>
       <FooterImage>
         <img
@@ -32,13 +39,19 @@ function Footer() {
 const Container = styled.div`
   position: relative;
   bottom: 180px;
+  margin-left: 40px;
   display: flex;
   color: white;
 `;
 
 const FooterText = styled.div`
   flex: 1;
+
+  h3 {
+    padding-bottom: 5px;
+  }
 `;
+
 const FooterImage = styled.div`
   img {
     height: 50px;
@@ -47,4 +60,13 @@ const FooterImage = styled.div`
   }
 `;
 
+const FooterTicker = styled.div``;
+const FooterIcon = styled.div`
+  position: absolute;
+  padding: 12px;
+`;
+const TickerContainer = styled.div`
+  height: fit-content;
+  margin-left: 40px;
+`;
 export default Footer;
