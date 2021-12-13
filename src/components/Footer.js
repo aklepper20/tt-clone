@@ -4,12 +4,12 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import Ticker from "react-ticker";
 
-function Footer() {
+function Footer({ channel, desc, song }) {
   return (
     <Container>
       <FooterText>
-        <h3>@qazi</h3>
-        <p>This is a dexcription</p>
+        <h3>@{channel}</h3>
+        <p>{desc}</p>
         <FooterTicker>
           <FooterIcon>
             <MusicNoteIcon />
@@ -19,7 +19,7 @@ function Footer() {
             <Ticker mode="smooth">
               {({ index }) => (
                 <>
-                  <p>hiiiiiii</p>
+                  <p>{song}</p>
                 </>
               )}
             </Ticker>

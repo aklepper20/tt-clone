@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useState } from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
+import SideBar from "./SideBar";
 
 function Video() {
   const [playing, setPlaying] = useState(false);
@@ -30,7 +31,8 @@ function Video() {
           loop
         ></video>
       </VideoPlayer>
-      <Footer />
+      <Footer channel="aly baez" desc="wow i love to dance" song="say so" />
+      <SideBar />
     </VideoContainer>
   );
 }
