@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useState } from "react";
 import styled from "styled-components";
+import Footer from "./Footer";
 
 function Video() {
   const [playing, setPlaying] = useState(false);
@@ -29,6 +30,7 @@ function Video() {
           loop
         ></video>
       </VideoPlayer>
+      <Footer />
     </VideoContainer>
   );
 }
