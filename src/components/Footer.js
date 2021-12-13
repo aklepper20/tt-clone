@@ -68,11 +68,12 @@ const FooterImage = styled.div`
 const FooterTicker = styled.div``;
 const FooterIcon = styled.div`
   position: absolute;
+  margin-bottom: 5px;
 `;
 const TickerContainer = styled.div`
   height: fit-content;
   width: 100%;
-  margin-left: 50px;
+  margin-left: 30px;
 
   p {
     margin: 0;
