@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Footer from "./Footer";
 import SideBar from "./SideBar";
 
-function Video() {
+function Video({ url, channel, desc, song, likes, messages, shares }) {
   const [playing, setPlaying] = useState(false);
   //makes a reference to the video you are currently on
   const videoRef = useRef(null);
@@ -31,8 +31,8 @@ function Video() {
           loop
         ></video>
       </VideoPlayer>
-      <Footer channel="aly baez" desc="wow i love to dance" song="say so" />
-      <SideBar />
+      <Footer channel={channel} desc={desc} song={song} />
+      <SideBar likes={likes} messages={messages} shares={shares} />
     </VideoContainer>
   );
 }
